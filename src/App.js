@@ -42,7 +42,7 @@ function Create(props) {
             event.preventDefault();
             const title = event.target.title.value;
             const body = event.target.body.value;
-            props.onCreate(title, body);
+            props.onCreate (title, body);
         }}>
             <p><input type="text" name="title" placeholder="title"/></p>
             <p><textarea name="body" placeholder="body"></textarea></p>
@@ -77,9 +77,9 @@ function App() {
     let [mode, setMode] = useState('WELCOME');
     let [id, setId] = useState(null);
     const [nextId, setNextId] = useState(4);
-    const [topics, setTopics] = useState([{id: 1, title: 'html', body: 'html is ...'}, {
-        id: 2, title: 'css', body: 'css is ...'
-    }, {id: 3, title: 'js', body: 'js is ...'}]);
+    const [topics, setTopics] = useState([{id: 1, title: 'html', body: 'html is ...'},
+        {id: 2, title: 'css', body: 'css is ...'},
+        {id: 3, title: 'js', body: 'js is ...'}]);
     let content = null;
     let contextControl = null;
     if (mode === 'WELCOME') {
